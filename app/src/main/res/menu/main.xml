@@ -14,4 +14,8 @@
         android:id="@+id/rewarded_videoAd"
         android:title="Rewarded Video Ad"/>
 
+    <item
+        android:id="@+id/native_template_ad"
+        android:title="Native Ad" />
+
 </menu>

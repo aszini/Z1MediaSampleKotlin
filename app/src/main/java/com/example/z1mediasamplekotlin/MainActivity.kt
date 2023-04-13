@@ -48,6 +48,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent2)
                 return true
             }
+            R.id.native_template_ad ->{
+                val intent2 = Intent(this@MainActivity, NativeTemplateAdActivity::class.java)
+                startActivity(intent2)
+                return true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
