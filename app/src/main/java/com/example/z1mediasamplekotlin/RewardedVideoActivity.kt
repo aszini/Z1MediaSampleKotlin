@@ -16,6 +16,7 @@ class RewardedVideoActivity : AppCompatActivity() {
 
         val rewardedVideoAd = Z1RewardedVideoAd.Builder(this)
             .setTagName("in-app-sample-rw-Z1")
+            .setEnvironment(BuildConfig.BUILD_TYPE)
             .setZ1RewardInterstitialI(object : Z1RewardedVideoI {
 
                 override fun onAdFailedToLoad(errorMessage: String) {

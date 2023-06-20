@@ -13,6 +13,7 @@ class InterstitialAdActivity : AppCompatActivity() {
 
         val interstitialAd =  Z1InterstitialAd.Builder(this)
             .setTagName("in-app-sample-in-Z1")
+            .setEnvironment(BuildConfig.BUILD_TYPE)
             .setZ1AdManagerInterstitialAdLoadCallback( object : Z1AdManagerInterstitialI {
                 override fun onAdFailedToLoad(errorMessage: String) {
                 }

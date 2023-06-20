@@ -2,6 +2,7 @@ package com.example.z1mediasamplekotlin.application
 
 import android.app.Application
 import android.content.Context
+import com.example.z1mediasamplekotlin.BuildConfig
 import com.z1media.android.sdk.Z1AppOpenAd
 import com.z1media.android.sdk.listeners.Z1AppOpenI
 import com.z1media.android.sdk.manager.Z1MediaManager
@@ -15,6 +16,7 @@ class MyApplication : Application() {
 
     appOpenAd = Z1AppOpenAd.Builder(this)
         .setTagName("in-app-sample-ap-Z1")
+        .setEnvironment(BuildConfig.BUILD_TYPE)
         .setAppOpenListener(object : Z1AppOpenI {
             override fun onAdLoaded() {
 
