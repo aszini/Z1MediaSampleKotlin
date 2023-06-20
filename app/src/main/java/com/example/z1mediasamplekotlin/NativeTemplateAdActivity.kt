@@ -7,6 +7,7 @@ import android.view.MenuItem
 import com.example.z1mediasamplekotlin.databinding.ActivityNativeTemplateAdBinding
 import com.z1media.android.sdk.Z1NativeAd
 import com.z1media.android.sdk.listeners.Z1NativeAdsI
+import com.z1media.android.sdk.utils.Z1AdError
 import com.z1media.android.sdk.utils.Z1MediaAspectRatio
 import com.z1media.android.sdk.utils.gone
 import com.z1media.android.sdk.utils.visible
@@ -53,6 +54,7 @@ class NativeTemplateAdActivity : AppCompatActivity() {
         val nativeAd = Z1NativeAd.Builder(this)
             .setTemplateView(binding.templateSmall)
             .setTagName("in-app-sample-n-Z1")
+            .setApplovinAdUnitId("bd4cea782509e809")
             .setEnvironment(BuildConfig.BUILD_TYPE)
             .setMediaAspectRatio(Z1MediaAspectRatio.PORTRAIT)
             .setBackgroundColor(R.color.white)
@@ -70,7 +72,11 @@ class NativeTemplateAdActivity : AppCompatActivity() {
 
                 }
 
-                override fun onAdFailedToLoad(message: String) {
+                override fun onAdClicked() {
+
+                }
+
+                override fun onAdFailedToLoad(adError: Z1AdError?) {
 
                 }
 
@@ -86,6 +92,7 @@ class NativeTemplateAdActivity : AppCompatActivity() {
         val nativeAd = Z1NativeAd.Builder(this)
             .setTemplateView(binding.templateMedium)
             .setTagName("in-app-sample-n-Z1")
+            .setApplovinAdUnitId("9dd802ebdaa7cb7b")
             .setMediaAspectRatio(Z1MediaAspectRatio.PORTRAIT)
             .setBackgroundColor(R.color.white)
             .setNativeAdListener(object : Z1NativeAdsI {
@@ -102,7 +109,11 @@ class NativeTemplateAdActivity : AppCompatActivity() {
 
                 }
 
-                override fun onAdFailedToLoad(message: String) {
+                override fun onAdClicked() {
+
+                }
+
+                override fun onAdFailedToLoad(adError: Z1AdError?) {
 
                 }
 

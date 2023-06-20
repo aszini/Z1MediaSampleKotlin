@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.z1mediasamplekotlin.databinding.ActivityRewardedVideoBinding
 import com.z1media.android.sdk.Z1RewardedVideoAd
 import com.z1media.android.sdk.listeners.Z1RewardedVideoI
+import com.z1media.android.sdk.utils.Z1AdError
 
 class RewardedVideoActivity : AppCompatActivity() {
     lateinit var  binding: ActivityRewardedVideoBinding
@@ -16,25 +17,33 @@ class RewardedVideoActivity : AppCompatActivity() {
 
         val rewardedVideoAd = Z1RewardedVideoAd.Builder(this)
             .setTagName("in-app-sample-rw-Z1")
+            .setApplovinAdUnitId("df24933bfe0e0313")
             .setEnvironment(BuildConfig.BUILD_TYPE)
             .setZ1RewardInterstitialI(object : Z1RewardedVideoI {
 
-                override fun onAdFailedToLoad(errorMessage: String) {
+
+                override fun onAdLoaded() {
+
+                }
+
+                override fun onAdFailedToLoad(adError: Z1AdError?) {
+
                 }
 
                 override fun onAdClicked() {
-                }
 
-                override fun onAdDismissedFullScreenContent() {
-                }
-
-                override fun onAdFailedToShowFullScreenContent(errMsg: String) {
-                }
-
-                override fun onAdImpression() {
                 }
 
                 override fun onAdShowedFullScreenContent() {
+
+                }
+
+                override fun onAdDismissedFullScreenContent() {
+
+                }
+
+                override fun onAdFailedToShowFullScreenContent(adError: Z1AdError?) {
+
                 }
 
                 override fun onUserEarnedReward(amount: Int, type: String) {

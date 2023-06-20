@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.z1mediasamplekotlin.databinding.ActivityBannerBinding
 import com.z1media.android.sdk.Z1BannerAd
 import com.z1media.android.sdk.listeners.Z1BannerAdsI
+import com.z1media.android.sdk.utils.Z1AdError
 import com.z1media.android.sdk.utils.Z1AdSize
 
 class BannerActivity : AppCompatActivity() {
@@ -20,6 +21,7 @@ class BannerActivity : AppCompatActivity() {
         val bannerAd = Z1BannerAd.Builder(this)
             .setBannerView(binding.bannerAdsContainer)
             .setTagName("in-app-sample-b-Z1")
+            .setApplovinAdUnitId("d166d2539686a150")
             .setEnvironment(BuildConfig.BUILD_TYPE)
             .setAddSize(Z1AdSize.BANNER)
             .setZ1BannerAdListener( object : Z1BannerAdsI {
@@ -33,7 +35,7 @@ class BannerActivity : AppCompatActivity() {
                     binding.textView.text = builder.toString()
                 }
 
-                override fun onAdFailedToLoad(errorMsg: String) {
+                override fun onAdFailedToLoad(adError: Z1AdError?) {
                     builder.append("Add Fail to load \n")
                     binding.textView.text = builder.toString()
                 }

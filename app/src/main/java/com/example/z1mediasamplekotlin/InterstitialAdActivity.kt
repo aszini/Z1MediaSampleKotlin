@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.z1media.android.sdk.Z1InterstitialAd
 import com.z1media.android.sdk.listeners.Z1AdManagerInterstitialI
+import com.z1media.android.sdk.utils.Z1AdError
 
 class InterstitialAdActivity : AppCompatActivity() {
 
@@ -13,9 +14,13 @@ class InterstitialAdActivity : AppCompatActivity() {
 
         val interstitialAd =  Z1InterstitialAd.Builder(this)
             .setTagName("in-app-sample-in-Z1")
+            .setApplovinAdUnitId("6612297efccb6ca4")
             .setEnvironment(BuildConfig.BUILD_TYPE)
             .setZ1AdManagerInterstitialAdLoadCallback( object : Z1AdManagerInterstitialI {
-                override fun onAdFailedToLoad(errorMessage: String) {
+                override fun onAdLoaded() {
+                }
+
+                override fun onAdFailedToLoad(adError: Z1AdError?) {
                 }
 
                 override fun onAdClicked() {
@@ -24,14 +29,10 @@ class InterstitialAdActivity : AppCompatActivity() {
                 override fun onAdDismissedFullScreenContent() {
                 }
 
-                override fun onAdFailedToShowFullScreenContent(errMsg: String) {
-                }
-
-                override fun onAdImpression() {
+                override fun onAdFailedToShowFullScreenContent(adError: Z1AdError?) {
                 }
 
                 override fun onAdShowedFullScreenContent() {
-
                 }
             }).build()
         interstitialAd.loadInterstitialAd()

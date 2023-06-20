@@ -6,6 +6,7 @@ import com.example.z1mediasamplekotlin.BuildConfig
 import com.z1media.android.sdk.Z1AppOpenAd
 import com.z1media.android.sdk.listeners.Z1AppOpenI
 import com.z1media.android.sdk.manager.Z1MediaManager
+import com.z1media.android.sdk.utils.Z1AdError
 
 class MyApplication : Application() {
 
@@ -17,12 +18,13 @@ class MyApplication : Application() {
     appOpenAd = Z1AppOpenAd.Builder(this)
         .setTagName("in-app-sample-ap-Z1")
         .setEnvironment(BuildConfig.BUILD_TYPE)
+        .setApplovinAdUnitId("795c516fd8fe194f")
         .setAppOpenListener(object : Z1AppOpenI {
             override fun onAdLoaded() {
 
             }
 
-            override fun onAdFailedToLoad(message: String) {
+            override fun onAdFailedToLoad(adError: Z1AdError?) {
 
             }
 
@@ -34,7 +36,7 @@ class MyApplication : Application() {
 
             }
 
-            override fun onAdFailedToShowFullScreenContent(message: String) {
+            override fun onAdFailedToShowFullScreenContent(adError: Z1AdError?) {
 
             }
 

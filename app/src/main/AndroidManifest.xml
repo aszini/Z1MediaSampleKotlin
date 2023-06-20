@@ -17,6 +17,16 @@
             android:name=".NativeTemplateAdActivity"
             android:exported="false" />
         <activity
+            android:name=".BannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InterstitialAdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RewardedVideoActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
@@ -32,6 +42,12 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <!-- Sample Applovin sdk key-->
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="29x14AhBCSieP6pWR2geDWzvg7Adfrvo8gm4RggV1C_I2yip1LuodSvbf4fR4EsDodOuVIxCWdviGmIqOrZXNd" />
+
     </application>
 
 </manifest>
