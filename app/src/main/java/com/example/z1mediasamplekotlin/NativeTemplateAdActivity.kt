@@ -7,7 +7,7 @@ import android.view.MenuItem
 import com.example.z1mediasamplekotlin.databinding.ActivityNativeTemplateAdBinding
 import com.z1media.android.sdk.Z1NativeAd
 import com.z1media.android.sdk.listeners.Z1NativeAdsI
-import com.z1media.android.sdk.utils.Z1AdError
+import com.z1media.android.sdk.models.Z1AdError
 import com.z1media.android.sdk.utils.Z1MediaAspectRatio
 import com.z1media.android.sdk.utils.gone
 import com.z1media.android.sdk.utils.visible

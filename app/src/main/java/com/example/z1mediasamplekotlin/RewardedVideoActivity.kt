@@ -3,10 +3,11 @@ package com.example.z1mediasamplekotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.z1mediasamplekotlin.application.MyApplication
 import com.example.z1mediasamplekotlin.databinding.ActivityRewardedVideoBinding
 import com.z1media.android.sdk.Z1RewardedVideoAd
 import com.z1media.android.sdk.listeners.Z1RewardedVideoI
-import com.z1media.android.sdk.utils.Z1AdError
+import com.z1media.android.sdk.models.Z1AdError
 
 class RewardedVideoActivity : AppCompatActivity() {
     lateinit var  binding: ActivityRewardedVideoBinding
@@ -18,6 +19,7 @@ class RewardedVideoActivity : AppCompatActivity() {
         val rewardedVideoAd = Z1RewardedVideoAd.Builder(this)
             .setTagName("in-app-sample-rw-Z1")
             .setApplovinAdUnitId("df24933bfe0e0313")
+            .setIronSourceParams((application as MyApplication).IRON_SOURCE_APP_KEY,"DefaultRewardedVideo")
             .setEnvironment(BuildConfig.BUILD_TYPE)
             .setZ1RewardInterstitialI(object : Z1RewardedVideoI {
 
