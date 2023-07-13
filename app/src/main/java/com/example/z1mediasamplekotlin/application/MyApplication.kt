@@ -20,7 +20,7 @@ class MyApplication : Application() {
         .setTagName("in-app-sample-ap-Z1")
         .setEnvironment(BuildConfig.BUILD_TYPE)
         .setApplovinAdUnitId("795c516fd8fe194f")
-        .setIronSourceParams(IRON_SOURCE_APP_KEY,"DefaultOfferWall")
+            .setIronSourceParams(IRON_SOURCE_APP_KEY,"DefaultOfferWall")
         .setAppOpenListener(object : Z1AppOpenI {
             override fun onAdLoaded() {
 

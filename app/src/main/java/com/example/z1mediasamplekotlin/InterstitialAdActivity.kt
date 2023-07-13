@@ -16,7 +16,7 @@ class InterstitialAdActivity : AppCompatActivity() {
         val interstitialAd =  Z1InterstitialAd.Builder(this)
             .setTagName("in-app-sample-in-Z1")
             .setApplovinAdUnitId("6612297efccb6ca4")
-            .setIronSourceParams((application as MyApplication).IRON_SOURCE_APP_KEY,"DefaultRewardedVideo")
+            .setIronSourceParams((application as MyApplication).IRON_SOURCE_APP_KEY,"DefaultInterstitial")
             .setEnvironment(BuildConfig.BUILD_TYPE)
             .setZ1AdManagerInterstitialAdLoadCallback( object : Z1AdManagerInterstitialI {
                 override fun onAdLoaded() {

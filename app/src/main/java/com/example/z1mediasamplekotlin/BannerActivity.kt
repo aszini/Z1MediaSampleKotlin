@@ -2,6 +2,7 @@ package com.example.z1mediasamplekotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.z1mediasamplekotlin.application.MyApplication
 import com.example.z1mediasamplekotlin.databinding.ActivityBannerBinding
 import com.z1media.android.sdk.Z1BannerAd
 import com.z1media.android.sdk.listeners.Z1BannerAdsI
@@ -22,7 +23,7 @@ class BannerActivity : AppCompatActivity() {
             .setBannerView(binding.bannerAdsContainer)
             .setTagName("in-app-sample-b-Z1")
             .setApplovinAdUnitId("d166d2539686a150")
-            .setIronSourceParams("","DefaultBanner")
+            .setIronSourceParams((application as MyApplication).IRON_SOURCE_APP_KEY,"DefaultBanner")
             .setEnvironment(BuildConfig.BUILD_TYPE)
             .setAddSize(Z1AdSize.BANNER)
             .setZ1BannerAdListener( object : Z1BannerAdsI {
