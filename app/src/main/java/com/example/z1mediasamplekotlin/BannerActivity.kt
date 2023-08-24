@@ -22,8 +22,6 @@ class BannerActivity : AppCompatActivity() {
         val bannerAd = Z1BannerAd.Builder(this)
             .setBannerView(binding.bannerAdsContainer)
             .setTagName("in-app-sample-b-Z1")
-            .setApplovinAdUnitId("d166d2539686a150")
-            .setIronSourceParams((application as MyApplication).IRON_SOURCE_APP_KEY,"DefaultBanner")
             .setEnvironment(BuildConfig.BUILD_TYPE)
             .setAddSize(Z1AdSize.BANNER)
             .setZ1BannerAdListener( object : Z1BannerAdsI {

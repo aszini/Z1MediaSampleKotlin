@@ -18,9 +18,7 @@ class RewardedVideoActivity : AppCompatActivity() {
 
         val rewardedVideoAd = Z1RewardedVideoAd.Builder(this)
             .setTagName("in-app-sample-rw-Z1")
-            .setApplovinAdUnitId("df24933bfe0e0313")
-            .setIronSourceParams((application as MyApplication).IRON_SOURCE_APP_KEY,"DefaultRewardedVideo")
-            .setEnvironment(BuildConfig.BUILD_TYPE)
+           .setEnvironment(BuildConfig.BUILD_TYPE)
             .setZ1RewardInterstitialI(object : Z1RewardedVideoI {
 
 
