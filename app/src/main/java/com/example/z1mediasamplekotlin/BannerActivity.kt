@@ -24,7 +24,7 @@ class BannerActivity : AppCompatActivity() {
             .setTagName("in-app-sample-b-Z1")
             .setEnvironment(BuildConfig.BUILD_TYPE)
             .setAddSize(Z1AdSize.BANNER)
-            .setZ1BannerAdListener( object : Z1BannerAdsI {
+            .setListener( object : Z1BannerAdsI {
                 override fun onAdClicked() {
                     builder.append("Add Clicked \n")
                     binding.textView.text = builder.toString()

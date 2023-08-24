@@ -19,7 +19,7 @@ class RewardedVideoActivity : AppCompatActivity() {
         val rewardedVideoAd = Z1RewardedVideoAd.Builder(this)
             .setTagName("in-app-sample-rw-Z1")
            .setEnvironment(BuildConfig.BUILD_TYPE)
-            .setZ1RewardInterstitialI(object : Z1RewardedVideoI {
+            .setListener(object : Z1RewardedVideoI {
 
 
                 override fun onAdLoaded() {
@@ -27,6 +27,10 @@ class RewardedVideoActivity : AppCompatActivity() {
                 }
 
                 override fun onAdFailedToLoad(adError: Z1AdError?) {
+
+                }
+
+                override fun onAdImpression() {
 
                 }
 
@@ -45,6 +49,8 @@ class RewardedVideoActivity : AppCompatActivity() {
                 override fun onAdFailedToShowFullScreenContent(adError: Z1AdError?) {
 
                 }
+
+
 
                 override fun onUserEarnedReward(amount: Int, type: String) {
                     binding.title.text = "Reward Amount $amount , type: $type"
