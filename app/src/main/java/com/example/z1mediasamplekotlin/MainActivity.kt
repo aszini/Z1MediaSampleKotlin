@@ -53,6 +53,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent2)
                 return true
             }
+            R.id.rewarded_interstitial_ad ->{
+                val intent2 = Intent(this@MainActivity, RewardedInterstitialActivity::class.java)
+                startActivity(intent2)
+                return true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -19,7 +19,7 @@ class MyApplication : Application() {
     appOpenAd = Z1AppOpenAd.Builder(this)
         .setTagName("in-app-sample-ap-Z1")
         .setEnvironment(BuildConfig.BUILD_TYPE)
-        .setAppOpenListener(object : Z1AppOpenI {
+        .setListener(object : Z1AppOpenI {
             override fun onAdLoaded() {
 
             }

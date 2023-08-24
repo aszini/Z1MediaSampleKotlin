@@ -18,4 +18,8 @@
         android:id="@+id/native_template_ad"
         android:title="Native Ad" />
 
+    <item
+        android:id="@+id/rewarded_interstitial_ad"
+        android:title="Rewarded Interstitial AD" />
+
 </menu>

@@ -56,7 +56,7 @@ class NativeTemplateAdActivity : AppCompatActivity() {
             .setTagName("in-app-sample-n-Z1")
            .setMediaAspectRatio(Z1MediaAspectRatio.PORTRAIT)
             .setBackgroundColor(R.color.white)
-            .setNativeAdListener(object : Z1NativeAdsI {
+            .setListener(object : Z1NativeAdsI {
 
                 override fun onAdLoaded() {
 
@@ -93,7 +93,7 @@ class NativeTemplateAdActivity : AppCompatActivity() {
             .setApplovinAdUnitId("9dd802ebdaa7cb7b")
             .setMediaAspectRatio(Z1MediaAspectRatio.PORTRAIT)
             .setBackgroundColor(R.color.white)
-            .setNativeAdListener(object : Z1NativeAdsI {
+            .setListener(object : Z1NativeAdsI {
 
                 override fun onAdLoaded() {
 
