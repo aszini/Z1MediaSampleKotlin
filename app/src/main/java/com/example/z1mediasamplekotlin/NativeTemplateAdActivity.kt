@@ -53,6 +53,7 @@ class NativeTemplateAdActivity : AppCompatActivity() {
 
         val nativeAd = Z1NativeAd.Builder(this)
             .setTemplateView(binding.templateSmall)
+            .setEnvironment(BuildConfig.BUILD_TYPE)
             .setTagName("in-app-sample-n-Z1")
            .setMediaAspectRatio(Z1MediaAspectRatio.PORTRAIT)
             .setBackgroundColor(R.color.white)
@@ -89,6 +90,7 @@ class NativeTemplateAdActivity : AppCompatActivity() {
 
         val nativeAd = Z1NativeAd.Builder(this)
             .setTemplateView(binding.templateMedium)
+            .setEnvironment(BuildConfig.BUILD_TYPE)
             .setTagName("in-app-sample-n-Z1")
             .setApplovinAdUnitId("9dd802ebdaa7cb7b")
             .setMediaAspectRatio(Z1MediaAspectRatio.PORTRAIT)
